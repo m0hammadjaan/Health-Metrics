@@ -11,21 +11,33 @@ error_reporting(0);
      
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
      
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-         
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <center>
-        <h1>Doctor Appointment System</h1>
-    </center>
-    <center>
-    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-        Username <input type="text" name="username" placeholder="Username" /><br><br>
-        Password <input type="password" name="password" placeholder="Password" /><br><br>
-        <input type="submit" name="login" value="Login"/><br><br>
-    </form>
-    </center>
+    <div class="back">
+            <div class="div-center">
+                <div class="content">
+                    <center>
+                        <img src="HealthMetrics.png" alt="Health Metrics" srcset="">
+                    </center>
+                    <h3>Login</h3>
+                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                        <div class="form-group">
+                            <label for="">Username</label>
+                            <input class="form-control" type="text" name="username" placeholder="Username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Password</label>
+                            <input class="form-control" type="password" name="password" placeholder="Password" />
+                        </div>
+                        <input class="btn btn-primary" type="submit" name="login" value="Login"/><br><br>
+                    </form>
+                </div>
+            </div>
+    </div>
+
     <?php
     $username=mysqli_real_escape_string($conn,$_POST['username']);
     $password=$_POST['password'];
