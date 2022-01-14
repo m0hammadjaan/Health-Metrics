@@ -1,8 +1,16 @@
-.back {
+.back-login {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3flR_WNd3O7y7DZkf1Urkij3M6OjlqL82pQ&usqp=CAU");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.back {
+  background: #e0e0e0;
+  width: 100%;
+  height:100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -12,7 +20,7 @@
   width: 400px;
   height: 400px;
   background-color: #fff;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top: 0;

@@ -34,7 +34,7 @@ error_reporting(0);
       
 </head>
 <body>
-    <center><h1>Doctor Appointment System</h1></center>
+    </div>
     <h1 class="right_user"><?php echo $_SESSION['username'] ?></h1>
     <a href="logout.php">
         <h2 class="right">Logout</h2>
@@ -43,9 +43,9 @@ error_reporting(0);
     <?php
     if($_SESSION['username']=="admin"){ 
     ?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">DAS</a>
+    <img class="navbar-brand" src="HealthMetrics.png" />
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

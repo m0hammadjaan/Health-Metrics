@@ -13,16 +13,16 @@ error_reporting(0);
      
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Health Metrics | Login</title>
 </head>
 <body>
-    <div class="back">
+    <div class="back-login">
             <div class="div-center">
                 <div class="content">
                     <center>
                         <img src="HealthMetrics.png" alt="Health Metrics" srcset="">
                     </center>
-                    <h3>Login</h3>
+                    <center><h3>Login</h3></center>
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                         <div class="form-group">
                             <label for="">Username</label>

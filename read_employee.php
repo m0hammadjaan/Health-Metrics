@@ -7,11 +7,13 @@ error_reporting(0); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    
-<center>
+
+    <center>
         <h1>Read Employee</h1>
     </center>
     <?php
@@ -19,7 +21,7 @@ error_reporting(0); ?>
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+    <table class="table table-bordered border-primary">
         <tr>
             <th>ID</th>
             <th>FIRST NAME</th>
@@ -47,13 +49,14 @@ error_reporting(0); ?>
             <td><?php echo $data['EMP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
             <td>
-                <a href="update_employee.php?id=<?php echo $data['EMPID']; ?>">Update</a>
-                <a onClick="javascript: return confirm('Please confirm deletion');" href="delete_employee.php?id=<?php echo $data['EMPID']; ?>">Delete</a>
-                <a href="create_dependents.php?id=<?php echo $data['EMPID']; ?>">Add Dependents</a>
+                <a class="btn btn-primary" href="update_employee.php?id=<?php echo $data['EMPID']; ?>">Update</a>
+                <a class="btn btn-danger" onClick="javascript: return confirm('Please confirm deletion');" href="delete_employee.php?id=<?php echo $data['EMPID']; ?>">Delete</a>
+                <a class="btn btn-primary" href="create_dependents.php?id=<?php echo $data['EMPID']; ?>">Add Dependents</a>
             </td>
         </tr>
         <?php } ?>
     </table>
+    
     <?php } 
     else
     {
