@@ -1,5 +1,5 @@
 .back-login {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3flR_WNd3O7y7DZkf1Urkij3M6OjlqL82pQ&usqp=CAU");
+  background-image: url("login-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -20,7 +20,7 @@
   width: 400px;
   height: 400px;
   background-color: #fff;
-  position: relative;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
