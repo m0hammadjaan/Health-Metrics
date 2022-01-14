@@ -7,23 +7,29 @@ error_reporting(0); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="div-center">
+        <div class="content">
     <center>
         <h1>Create Doctor</h1>
     </center>
     <form action="" method="post">
-        First Name <input type="text" name="fname" /> e.g. Muhammad <br><br>
-        Last Name <input type="text" name="lname" /> e.g. Jan <br><br>
-        Gender:   Male <input type="radio" name="gender" value="Male" /> Female <input type="radio" name="gender" value="Female"/> <br><br>
-        Email <input type="email" name="email"/> e.g. abc_123@xyz.com <br><br>
-        Qualification <input type="text" name="specialization" /> e.g. Director <br><br>
-        Contact <input type="number" name="contact" /> e.g. 03XXXXXXXXX <br><br>
-        CNIC <input type="number" name="cnic" /> XXXXXXXXXXXXX <br><br>
-        DOB <input type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25 <br><br>
+        <div class="form-group">  <label for=""> First Name </label> <input class="form-control" type="text" name="fname" /> e.g. Muhammad </div>
+        Last Name <input type="text" name="lname" /> e.g. Jan 
+        Gender:   Male <input type="radio" name="gender" value="Male" /> Female <input type="radio" name="gender" value="Female"/> 
+        Email <input type="email" name="email"/> e.g. abc_123@xyz.com 
+        Qualification <input type="text" name="specialization" /> e.g. Director 
+        Contact <input type="number" name="contact" /> e.g. 03XXXXXXXXX 
+        CNIC <input type="number" name="cnic" /> XXXXXXXXXXXXX 
+        DOB <input type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25
         <input type="submit" name="submit" value="Submit"/>
     </form>
+    </div>
+    </div>
     <?php
     $dofname = $_POST['fname'];
     $dolname = $_POST['lname'];
