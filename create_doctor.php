@@ -1,5 +1,5 @@
 <?php include('connections.php');
-include('header.php');
+
 error_reporting(0); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,28 +8,94 @@ error_reporting(0); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <title>Health Metrics | Create Doctor</title>
 </head>
 <body>
-    <div class="div-center">
-        <div class="content">
-    <center>
-        <h1>Create Doctor</h1>
-    </center>
+<div class="container">
+    <div class="title">Create Dependents</div>
+    <div class="content">
     <form action="" method="post">
-        <div class="form-group">  <label for=""> First Name </label> <input class="form-control" type="text" name="fname" /> e.g. Muhammad </div>
-        Last Name <input type="text" name="lname" /> e.g. Jan 
-        Gender:   Male <input type="radio" name="gender" value="Male" /> Female <input type="radio" name="gender" value="Female"/> 
-        Email <input type="email" name="email"/> e.g. abc_123@xyz.com 
-        Qualification <input type="text" name="specialization" /> e.g. Director 
-        Contact <input type="number" name="contact" /> e.g. 03XXXXXXXXX 
-        CNIC <input type="number" name="cnic" /> XXXXXXXXXXXXX 
-        DOB <input type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25
-        <input type="submit" name="submit" value="Submit"/>
-    </form>
+        <div class="user-details">
+       
+          <div class="input-box">
+            <span class="details">First Name </span>
+            <input type="text" placeholder="Enter your first name" name="fname" required> e.g. Muhammad
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name </span>
+            <input type="text" placeholder="Enter your last name" name="lname" required> e.g. Jan
+          </div>
+         
+         
+         
+          
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+         
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+         
+          </div>
+        </div>
+        <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" name="email" placeholder="Enter your email" required> e.g. abc_123@xyz.com 
+          </div>
+          <div class="input-box">
+            <span class="details">Qualification</span>
+            <input type="text" name="specialization" placeholder="Enter your Qualification/Specialization" required> e.g. Neurologist
+          </div>
+          <div class="input-box">
+            <span class="details">Contact Number</span>
+            <input type="number" name="contact" placeholder="Enter your number" required>  03XXXXXXXXX 
+          </div>
+
+        <div class="input-box">
+            <span class="details">CNIC Number</span>
+            <input type="number" name="cnic" placeholder="Enter your CNIC" required> XXXXXXXXXXXXX
+          </div>
+          <div class="input-box">
+            <span class="details">Date Of Birth</span>
+            <input type="text" placeholder="YYYY-MM-DD" name="dob" required> e.g. 2001-02-25 
+          </div>
+
+        <div class="button">
+          <input type="submit" value="Submit" name="submit">
+        </div>
+      </form>
     </div>
-    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+      
+       
     <?php
     $dofname = $_POST['fname'];
     $dolname = $_POST['lname'];
@@ -49,15 +115,13 @@ error_reporting(0); ?>
         echo 'Data Inserted Successfully :)';
         #header("Location: http://localhost/testpro/read_doctor.php");
         
-        echo "<script>window.top.location='http://localhost/testpro/read_doctor.php'</script>";
+        echo "<script>window.top.location='http://localhost/Health_Metrics/read_doctor.php'</script>";
     }
     else{
         echo 'Data not Inserted :(';
     }
     }
-    else{
-        echo 'All Fields are required!';
-    }
+    
 
     ?>
     
