@@ -7,6 +7,8 @@ error_reporting(0); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +22,7 @@ error_reporting(0); ?>
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+     <table class="table table-bordered border-primary">
         <tr>
             <th>EMPLOYEE ID</th>
             <th>DEPENDENT ID</th>
@@ -44,8 +46,8 @@ error_reporting(0); ?>
             <td><?php echo $data['DEP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
             <td>
-                <a href="update_dependents.php?id=<?php echo $data['DEPID']; ?>">Update</a>
-                <a onClick="javascript: return confirm('Please confirm deletion?');" href="http://localhost/testpro/delete_dependents.php?id=<?php echo $data['DEPID']; ?>">Delete</a>
+                <a class="btn btn-primary" href="update_dependents.php?id=<?php echo $data['DEPID']; ?>">Update</a>
+                <a class="btn btn-danger" onClick="javascript: return confirm('Please confirm deletion?');" href="http://localhost/testpro/delete_dependents.php?id=<?php echo $data['DEPID']; ?>">Delete</a>
             </td>
         </tr>
         <?php } ?>
