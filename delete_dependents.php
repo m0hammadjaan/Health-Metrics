@@ -8,7 +8,7 @@ $result=mysqli_query($conn,$sql);
 if($result)
 {
     echo 'Data Deleted Successfully :)';
-    header("Location: http://localhost/testpro/read_dependents.php");
+    header("Location: http://localhost/Health_Metrics/read_dependents.php");
 }
 else
 {
