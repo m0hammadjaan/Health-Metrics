@@ -7,24 +7,36 @@ error_reporting(0); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Health Metrics | Create Dependents</title>
 </head>
 <body>
+    <div class="div-center">
+            <div class="content">
     <center>
         <h1>Create Dependents</h1>
     </center>
-<?php 
+
+   <form action="" method="post">
+        <div class="form-group"> <label for=""> Employee ID </label> <input type="number" name="dempid" value="<?php echo $eid ?>" disabled /></div>
+        <div class="form-group"> <label for=""> First Name </label> <input type="text" name="fname" /> e.g. Muhammad </div>
+        <div class="form-group"> <label for=""> Last Name </label><input type="text" name="lname" /> e.g. Jan </div>
+       <div class="form-group"> <label class="form-label" for="">Gender:</label>  
+        <div class="form-check"><label class="form-check-label" for=""> Male</label>
+        <input class="form-check-input" type="radio" name="gender" value="Male" /></div>
+        <div class="form-check"><label class="form-check-label" for=""> Female </label> 
+        <input class="form-check-input" type="radio" name="gender" value="Female"/></div>
+        </div>
+        <div class="form-group"> <label for=""> CNIC </label> <input type="number" name="cnic" /> XXXXXXXXXXXXX </div>
+        <div class="form-group"> <label for=""> DOB </label> <input type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25 </div>
+        <input class="btn btn-primary" type="submit" name="submit" value="Submit"/>
+    </form>
+    </div>
+    </div>
+     <?php 
     $eid=$_GET['id'];
     ?>
-    <form action="" method="post">
-        Employee ID <input type="number" name="dempid" value="<?php echo $eid ?>" disabled /><br><br>
-        First Name <input type="text" name="fname" /> e.g. Muhammad <br><br>
-        Last Name <input type="text" name="lname" /> e.g. Jan <br><br>
-        Gender:   Male <input type="radio" name="gender" value="Male" /> Female <input type="radio" name="gender" value="Female"/> <br><br>
-        CNIC <input type="number" name="cnic" /> XXXXXXXXXXXXX <br><br>
-        DOB <input type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25 <br><br>
-        <input type="submit" name="submit" value="Submit"/>
-    </form>
     <?php
     $dempid=$_POST['dempid'];
     $dfname = $_POST['fname'];
