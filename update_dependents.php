@@ -35,7 +35,7 @@ error_reporting(0); ?>
             <span class="details">Dependent ID</span>
             <input type="number" name="did"  value=" <?php echo $did; ?>" disabled />
           </div>
-    <form action="" method="post">
+    
         
     <div class="input-box">
             <span class="details">First Name </span>
