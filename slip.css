@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+html, body {
+    min-height: 100%;
+    box-sizing: border-box;
+    }
+    body, div, form, input, select, p { 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+    font-family: 'Poppins',sans-serif;
+   
+    }
+    /* h1 {
+    margin: 15px 0;
+    font-weight: 400;
+    } */
+    .testbox .h1{
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+       font-style: linear-gradient(135deg, #71b7e6, #9b59b6);
+        margin-top: 15px;
+      }
+     
+    .testbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+  
+    max-width: 100vh;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    }
+    form {
+    width: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px #ccc; 
+    justify-content: center;
+    align-items: center;
+    }
+    input, select, textarea {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    }
+    input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    }
+    select {
+    width: 100%;
+    padding: 7px 0;
+    background: transparent;
+    }
+    textarea {
+    width: calc(100% - 6px);
+}
+    .item {
+    position: relative;
+    margin: 10px 0;
+    }
+    .item:hover p, .item:hover i {
+    color: #095484;
+    }
+    input:hover, select:hover, textarea:hover {
+    box-shadow: 0 0 5px 0 #095484;
+    }
+    .btn-block {
+    margin-top: 20px;
+    text-align: center;
+    }
+    button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+    
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    button:hover {
+    background-color: #0666a3;
+    }
+    @media (min-width: 568px) {
+    .name-item, .city-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+    .name-item input, .city-item input {
+    width: calc(50% - 20px);
+    }
+    .city-item select {
+    width: calc(50% - 8px);
+    }
+    }
