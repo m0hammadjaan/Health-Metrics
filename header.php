@@ -3,7 +3,7 @@ include('connections.php');
 session_start();
 if(!isset($_SESSION["username"]))
 {
-    header("Location: http://localhost/testpro/login.php");
+    header("Location: http://localhost/Health_Metrics/login.php");
 }
 error_reporting(0);
 ?>
@@ -58,8 +58,8 @@ error_reporting(0);
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="create_employee.php">Create Employee</a></li>
             <li><a class="dropdown-item" href="read_employee.php">Read Employee</a></li>
-            <li><a class="dropdown-item" href="read_employee.php">Update Employee</a></li>
-            <li><a class="dropdown-item" href="read_employee.php">Delete Employee</a></li>
+            <li><a class="dropdown-item" href="update_employee.php">Update Employee</a></li>
+            <li><a class="dropdown-item" href="delete_employee.php">Delete Employee</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -67,10 +67,10 @@ error_reporting(0);
             Dependents
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="read_employee.php">Create Dependents</a></li>
+            <li><a class="dropdown-item" href="create_dependents.php">Create Dependents</a></li>
             <li><a class="dropdown-item" href="read_dependents.php">Read Dependents</a></li>
-            <li><a class="dropdown-item" href="read_dependents.php">Update Dependents</a></li>
-            <li><a class="dropdown-item" href="read_dependents.php">Delete Dependents</a></li>
+            <li><a class="dropdown-item" href="update_dependents.php">Update Dependents</a></li>
+            <li><a class="dropdown-item" href="delete_dependents.php">Delete Dependents</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -80,8 +80,8 @@ error_reporting(0);
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="create_doctor.php">Create Doctor</a></li>
             <li><a class="dropdown-item" href="read_doctor.php">Read Doctor</a></li>
-            <li><a class="dropdown-item" href="read_doctor.php">Update Doctor</a></li>
-            <li><a class="dropdown-item" href="read_doctor.php">Delete Doctor</a></li>
+            <li><a class="dropdown-item" href="update_doctor.php">Update Doctor</a></li>
+            <li><a class="dropdown-item" href="delete_doctor.php">Delete Doctor</a></li>
           </ul>
         </li>
       </ul>
@@ -92,3 +92,5 @@ error_reporting(0);
 <?php  }  ?>
 </body>
 </html>
+
+
