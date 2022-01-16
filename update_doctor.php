@@ -12,15 +12,9 @@ error_reporting(0); ?>
 </head>
 <body>
     
-    <?php 
-    $doid=$_GET['id'];
-    $sql_select="select * from doctor where DOCID={$doid}";
-    $result_select=mysqli_query($conn,$sql_select);
-    if(mysqli_num_rows($result_select)>0){
-        while($data=mysqli_fetch_assoc($result_select)){
-    ?>
+   
     <div class="container">
-    <div class="title"> <center>Update Doctor</center></div>
+    <div class="title"> Update Doctor</div>
     <div class="content">
     
      <form action="" method="post">
@@ -86,7 +80,13 @@ error_reporting(0); ?>
     </div>
   </div>
 
-
+  <?php 
+    $doid=$_GET['id'];
+    $sql_select="select * from doctor where DOCID={$doid}";
+    $result_select=mysqli_query($conn,$sql_select);
+    if(mysqli_num_rows($result_select)>0){
+        while($data=mysqli_fetch_assoc($result_select)){
+    ?>
       
     <?php }
     }
@@ -111,7 +111,7 @@ error_reporting(0); ?>
     else{
         echo 'Data not Updated :(';
     }
-    }
-   
+  }
+   ?>
 </body>
 </html>
