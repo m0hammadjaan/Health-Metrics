@@ -14,15 +14,9 @@ error_reporting(0); ?>
 
     
 
-    <?php 
-    $did=$_GET['id'];
-    $sql_select="select * from dependents where DEPID={$did}";
-    $result_select=mysqli_query($conn,$sql_select);
-    if(mysqli_num_rows($result_select)>0){
-        while($data=mysqli_fetch_assoc($result_select)){
-    ?>
+   
     <div class="container">
-    <div class="title"> <center>Update Dependents</center></div>
+    <div class="title"> Update Dependents</div>
     <div class="content">
     
      <form action="" method="post">
@@ -35,7 +29,7 @@ error_reporting(0); ?>
             <span class="details">Dependent ID</span>
             <input type="number" name="did"  value=" <?php echo $did; ?>" disabled />
           </div>
-    
+   
         
     <div class="input-box">
             <span class="details">First Name </span>
@@ -81,6 +75,13 @@ error_reporting(0); ?>
     </div>
   </div>
         </div>
+        <?php 
+    $did=$_GET['id'];
+    $sql_select="select * from dependents where DEPID={$did}";
+    $result_select=mysqli_query($conn,$sql_select);
+    if(mysqli_num_rows($result_select)>0){
+        while($data=mysqli_fetch_assoc($result_select)){
+    ?>
        
        
     <?php
