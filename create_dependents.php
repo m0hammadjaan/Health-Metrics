@@ -1,7 +1,3 @@
-<?php include('connections.php');
-
-error_reporting(0); ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +16,7 @@ error_reporting(0); ?>
             <span class="details">Employee ID</span>
             <input type="number" name="dempid" placeholder="Enter your respective Employee Id" value="<?php echo $data['EMPID'] ?>"  required />
           </div>
-          <div class="box">
+          
           <div class="input-box">
             <span class="details">First Name </span>
             <input type="text" placeholder="Enter your first name" name="fname" required> e.g. Muhammad
@@ -31,7 +27,7 @@ error_reporting(0); ?>
           </div>
          
          
-          </div>
+         
           
         </div>
         <div class="gender-details">
