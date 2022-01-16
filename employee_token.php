@@ -29,7 +29,7 @@ error_reporting(0);
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+    <table border="1" class="table table-bordered border-primary">
         <tr>
             <th>ID</th>
             <th>FIRST NAME</th>
@@ -57,7 +57,7 @@ error_reporting(0);
             <td><?php echo $data['EMP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
             <td>
-                <a href="emp_token_add.php?id=<?php echo $data['EMPID']; ?>">Token</a>
+                <a class="btn btn-primary" href="emp_token_add.php?id=<?php echo $data['EMPID']; ?>">Token</a>
             </td>
         </tr>
         <?php } ?>
