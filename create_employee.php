@@ -1,5 +1,6 @@
 <?php include('connections.php');
 
+
 error_reporting(0); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +13,12 @@ error_reporting(0); ?>
     <title>Health Metrics | Create Employee</title>
 </head>
 <body>
-<div class="container">
+<div class="container ">
     <div class="title">Create Employee</div>
     <div class="content">
     <form action="" method="post">
         <div class="user-details">
-       
+        
           <div class="input-box">
             <span class="details">First Name </span>
             <input type="text" placeholder="Enter your first name" name="fname" required> e.g. Muhammad
@@ -28,7 +29,7 @@ error_reporting(0); ?>
           </div>
          
          
-         
+
           
         </div>
         <div class="gender-details">
