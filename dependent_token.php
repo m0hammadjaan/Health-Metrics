@@ -27,7 +27,7 @@ if(isset($_POST['search']))
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+    <table border="1"  class="table table-bordered border-primary">
         <tr>
             <th>EMPLOYEE ID</th>
             <th>DEPENDENT ID</th>
@@ -50,7 +50,7 @@ if(isset($_POST['search']))
             <td><?php echo $data['GENDER']; ?></td>
             <td><?php echo $data['DEP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
-            <td><a href="dep_token_add.php?id=<?php echo $data['DEPID']; ?>">Token</a></td>
+            <td><a class="btn btn-primary" href="dep_token_add.php?id=<?php echo $data['DEPID']; ?>">Token</a></td>
         </tr>
         <?php } ?>
     </table>
