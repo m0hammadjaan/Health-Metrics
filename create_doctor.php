@@ -13,7 +13,7 @@ error_reporting(0); ?>
 </head>
 <body>
 <div class="container">
-    <div class="title">Create Dependents</div>
+    <div class="title">Create Doctor</div>
     <div class="content">
     <form action="" method="post">
         <div class="user-details">
