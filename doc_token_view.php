@@ -3,7 +3,7 @@ include('header.php');
 error_reporting(0);
 if($_SESSION["username"]=="admin")
 {
-    header("Location: http://localhost/testpro/admin_dashboard.php");
+    header("Location: http://localhost/Health_Metrics/admin_dashboard.php");
 }
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if($_SESSION["username"]=="admin")
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+    <table border="1"  class="table table-bordered border-primary">
         <tr>
             <th>TOKEN ID</th>
             <th>EMPLOYEE ID</th>
@@ -52,8 +52,8 @@ if($_SESSION["username"]=="admin")
             <td><?php echo $data['VISIT_TIME']; ?></td>
             <td><?php echo $data['DOCID']; ?></td>
             <td>
-                <a href="create_slip.php?id=<?php echo $data['TOKENID']; ?>">Proceed</a>
-                <a onClick="javascript: return confirm('Please confirm deletion');" href="delete_token.php?id=<?php echo $data['TOKENID']; ?>">Delete</a>
+                <a  class="btn btn-primary" href="create_slip.php?id=<?php echo $data['TOKENID']; ?>">Proceed</a>
+                <a  class="btn btn-danger" onClick="javascript: return confirm('Please confirm deletion');" href="delete_token.php?id=<?php echo $data['TOKENID']; ?>">Delete</a>
             </td>
         </tr>
         <?php } ?>
