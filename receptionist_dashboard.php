@@ -9,37 +9,38 @@ if($_SESSION["username"]=="admin")
 ?>
 <html>
 <head>
-<style>
-a{
-    text-decoration: inherit;
-    color:  inherit;
-    
-}
-div{
-    margin: 15px;
-    border-style: solid;
-    padding: 20px;
-    text-align: center;
-    background-color: lightgrey;
-    font-size: 30px
-}
-h3{
-    margin: 5px;
-    padding: 10px;
-    text-align: center;
-    font-size: 40px
-}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 <title>
 Doctor Appointment System
 </title>
+<style>
+    .rec-a{
+  text-decoration: inherit;
+  color:  inherit;
+  
+}
+.rec-div{
+  margin: 15px;
+  border-style: solid;
+  padding: 20px;
+  text-align: center;
+  background-color: lightgrey;
+  font-size: 30px
+}
+.rec-h3{
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px
+}
+
+</style>
 </head>
 <body>
     <center>
         <h1>Receptionist Dashboard</h1>
     </center> 
-    <a href='employee_token.php'><div><h3>EMPLOYEE TOKEN</h3></div></a>
-    <a href='dependent_token.php'><div><h3>DEPENDENT TOKEN</h3></div></a>
+    <a class="rec-a" href='employee_token.php'><div class="rec-div"><h3 class="rec-h3">EMPLOYEE TOKEN</h3></div></a>
+    <a class="rec-a" href='dependent_token.php'><div class="rec-div"><h3 class="rec-h3">DEPENDENT TOKEN</h3></div></a>
 </body>
 </html>

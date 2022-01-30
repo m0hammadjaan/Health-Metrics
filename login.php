@@ -66,6 +66,11 @@ error_reporting(0);
                 $_SESSION["username"]="receptionist";
                 header("Location: http://localhost/testpro/receptionist_dashboard.php");
                 break;
+            case $username=="assistant" && $password=="assistant" :
+                session_start();
+                $_SESSION["username"]="assistant";
+                header("Location: http://localhost/testpro/assistant_token_view.php");
+                break;
             default:
                 echo "Username and Password is incorrect :(";
         

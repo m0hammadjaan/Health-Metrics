@@ -1,10 +1,11 @@
 <?php include('connections.php');
 include('header.php');
 error_reporting(0);
-if($_SESSION["username"]=="admin")
+if($_SESSION['username']!='assistant')
 {
-    header("Location: http://localhost/testpro/admin_dashboard.php");
+    echo '<center><h1 class="text-danger">You donot have the access :(</h1></center>';
 }
+else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,9 @@ if($_SESSION["username"]=="admin")
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
     <title>Document</title>
 </head>
 <body>
@@ -24,9 +28,9 @@ if($_SESSION["username"]=="admin")
     #$sql="select * from token where DOCID='{$_SESSION["username"]}' ";
     $sql="SELECT * 
     FROM token 
-    WHERE token.DOCID='{$_SESSION["username"]}' and NOT EXISTS(
-        SELECT * FROM general_checkup 
-        WHERE token.TOKENID = general_checkup.TOKENID)";
+    WHERE NOT EXISTS(
+        SELECT * FROM doctor_assistant 
+        WHERE token.TOKENID = doctor_assistant.TOKENID)";
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
@@ -52,8 +56,7 @@ if($_SESSION["username"]=="admin")
             <td><?php echo $data['VISIT_TIME']; ?></td>
             <td><?php echo $data['DOCID']; ?></td>
             <td>
-                <a class="btn btn-outline-primary" href="create_slip.php?id=<?php echo $data['TOKENID']; ?>">Proceed</a>
-                <a class="btn btn-outline-primary" href="doc_view_assistant.php?id=<?php echo $data['TOKENID']; ?>">Assistant Record</a>
+                <a class="btn btn-outline-primary" href="create_assistant.php?id=<?php echo $data['TOKENID']; ?>">Proceed</a>
                 <a class="btn btn-outline-danger" onClick="javascript: return confirm('Please confirm deletion');" href="delete_token.php?id=<?php echo $data['TOKENID']; ?>">Delete</a>
             </td>
         </tr>
@@ -68,3 +71,4 @@ if($_SESSION["username"]=="admin")
     ?>
 </body>
 </html>
+<?php } ?>

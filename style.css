@@ -40,3 +40,13 @@ div.content {
   display: table-cell;
   vertical-align: middle;
 }
+.right{
+  position:absolute;
+  right:20px;
+  top:10px;
+}
+.right_user{
+  position:absolute;
+  right:150px;
+  top:10px;
+}
