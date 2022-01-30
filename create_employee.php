@@ -13,7 +13,9 @@ error_reporting(0); ?>
 
 </head>
 <body>
-    
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-4"></div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
         <div class="div-center">
             <div class="content">
     <center>
@@ -36,7 +38,10 @@ error_reporting(0); ?>
         <input class="btn btn-primary" type="submit" name="submit" value="Submit"/>
     </form>
     </div>
+    <div class="col-md-4 col-sm-4 col-xs-4"></div>
     </div>
+    </div>
+</div>
     <?php
     $efname = $_POST['fname'];
     $elname = $_POST['lname'];
