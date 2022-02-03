@@ -10,8 +10,10 @@ error_reporting(0);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+     
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Health Metrics | Login</title>
+    <title>Health Metrics | Log In</title>
 </head>
 <body>
     <div class="back-login">
@@ -20,7 +22,7 @@ error_reporting(0);
                     <center>
                         <img src="HealthMetrics.png" alt="Health Metrics" srcset="">
                     </center>
-                    <center><h3>Login</h3></center>
+                    <center><h3>Log In</h3></center>
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                         <div class="form-group">
                             <label for="">Username</label>
@@ -30,7 +32,7 @@ error_reporting(0);
                             <label for="">Password</label>
                             <input class="form-control" type="password" name="password" placeholder="Password" />
                         </div>
-                        <input class="btn btn-primary" type="submit" name="login" value="Login"/><br><br>
+                        <input class="btn btn-primary" type="submit" name="login" value="Log In "/><br><br>
                     </form>
                 </div>
             </div>

@@ -6,29 +6,38 @@ error_reporting(0); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title>
 </head>
 <body>
-    <div class="div-center">
-        <div class="content">
-    <center>
-        <h1>Create Doctor</h1>
-    </center>
+    <div class="row">
+        <div class="col-md-4"></div>
+<div class="col-md-4">
+<h1 class="text-center text-primary ">Create Doctor</h1>
+        
+    
     <form action="" method="post">
-        <div class="form-group">  <label for=""> First Name </label> <input class="form-control" type="text" name="fname" /> e.g. Muhammad </div>
-        Last Name <input type="text" name="lname" /> e.g. Jan 
-        Gender:   Male <input type="radio" name="gender" value="Male" /> Female <input type="radio" name="gender" value="Female"/> 
-        Email <input type="email" name="email"/> e.g. abc_123@xyz.com 
-        Qualification <input type="text" name="specialization" /> e.g. Director 
-        Contact <input type="number" name="contact" /> e.g. 03XXXXXXXXX 
-        CNIC <input type="number" name="cnic" /> XXXXXXXXXXXXX 
-        DOB <input type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25
-        <input type="submit" name="submit" value="Submit"/>
-    </form>
+        <div class="form-group">  <h6 class="font-weight-bold">First Name </h6> <input class="form-control" type="text" name="fname" /> <small class="form-text text-muted"> e.g. Muhammad </small></div>
+        <div class="form-group">  <h6 class="font-weight-bold">Last Name </h6> <input class="form-control" type="text" name="lname" /> <small class="form-text text-muted"> e.g. Jan </small></div>
+        <div class="form-group">  <h6 class="font-weight-bold">Gender: </h6> 
+        <div class="form-check"><label class="form-check-label" for=""> Male</label>
+        <input class="form-check-input" type="radio" name="gender" value="Male" /></div>
+        <div class="form-check"><label class="form-check-label" for=""> Female </label> 
+        <input class="form-check-input" type="radio" name="gender" value="Female"/></div>
+        </div>
+        <div class="form-group">  <h6 class="font-weight-bold">Email </h6> <input class="form-control" type="email" name="email"/> <small class="form-text text-muted"> e.g. abc_123@xyz.com </small></div> 
+        <div class="form-group">  <h6 class="font-weight-bold">Qualification </h6> <input class="form-control" type="text" name="specialization" /><small class="form-text text-muted"> e.g. Cardiologist </small> </div>
+        <div class="form-group">  <h6 class="font-weight-bold">Contact </h6> <input class="form-control" type="number" name="contact" /> <small class="form-text text-muted"> e.g. 03XXXXXXXXX </small> </div>
+        <div class="form-group">  <h6 class="font-weight-bold">CNIC </h6> <input class="form-control" type="number" name="cnic" /> <small class="form-text text-muted"> e.g. XXXXXXXXXXXXX </small> </div>
+        <div class="form-group">  <h6 class="font-weight-bold">DOB </h6><input class="form-control" type=text placeholder="YYYY-MM-DD" name="dob"/> <small class="form-text text-muted"> e.g. 2001-02-25 </small></div>
+        <div class="row">
+            <div class="col-md-12">
+        <input class="w-100 btn btn-outline-primary btn-block btn-lg" type="submit" name="submit" value="Submit"/>
+        </div>
+        </div>
+        </form>
     </div>
+    <div class="col-md-4"></div>
     </div>
     <?php
     $dofname = $_POST['fname'];

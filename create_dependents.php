@@ -7,27 +7,36 @@ error_reporting(0); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
- 
     <title>Document</title>
 </head>
 <body>
-    <center>
-        <h1>Create Dependents</h1>
-    </center>
-<?php 
+<div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+
+        <h1 class="text-center text-primary">Create Dependents</h1>
+    
+    <?php 
     $eid=$_GET['id'];
     ?>
-    <form action="" method="post">
-        Employee ID <input type="number" name="dempid" value="<?php echo $eid ?>" disabled /><br><br>
-        First Name <input type="text" name="fname" /> e.g. Muhammad <br><br>
-        Last Name <input type="text" name="lname" /> e.g. Jan <br><br>
-        Gender:   Male <input type="radio" name="gender" value="Male" /> Female <input type="radio" name="gender" value="Female"/> <br><br>
-        CNIC <input type="number" name="cnic" /> XXXXXXXXXXXXX <br><br>
-        DOB <input type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25 <br><br>
-        <input type="submit" name="submit" value="Submit"/>
-    </form>
+   <form action="" method="post">
+    <div class="form-group"> <label for="">Employee ID <div class="form-group"> <label for=""><input class="form-control" type="number" name="dempid" value="<?php echo $eid ?>" disabled /></div>
+        <div class="form-group"> <label for="">First Name <div class="form-group"> <label for=""><input class="form-control" type="text" name="fname" /> e.g. Muhammad </div>
+        <div class="form-group"> <label for="">Last Name <div class="form-group"> <label for=""><input class="form-control" type="text" name="lname" /> e.g. Jan </div>
+        <div class="form-group"> <label class="form-label" for="">Gender:</label>  
+        <div class="form-check"><label class="form-check-label" for=""> Male</label>
+        <input class="form-check-input" type="radio" name="gender" value="Male" /></div>
+        <div class="form-check"><label class="form-check-label" for=""> Female </label> 
+        <input class="form-check-input" type="radio" name="gender" value="Female"/></div>
+        </div>
+        <div class="form-group"> <label for="">CNIC <div class="form-group"> <label for=""><input class="form-control" type="number" name="cnic" /> XXXXXXXXXXXXX </div>
+        <div class="form-group"> <label for="">DOB <div class="form-group"> <label for=""><input class="form-control" type=text placeholder="YYYY-MM-DD" name="dob"/> e.g. 2001-02-25 </div>
+        <input class="btn btn-outline-success" type="submit" name="submit" value="Submit"/>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
     <?php
     $dempid=$_POST['dempid'];
     $dfname = $_POST['fname'];

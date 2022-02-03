@@ -6,24 +6,21 @@ error_reporting(0); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
 
-    <center>
-        <h1>Read Employee</h1>
-    </center>
+        <h1 class="text-center text-primary">Read Employee</h1>
     <?php
     $sql="select * from employee";
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
     <table class="table table-bordered border-primary">
-        <tr>
+        <tr class="text-center">
             <th>ID</th>
             <th>FIRST NAME</th>
             <th>LAST NAME</th>
@@ -39,7 +36,7 @@ error_reporting(0); ?>
 
     while($data=mysqli_fetch_array($result)){
     ?>
-        <tr>
+        <tr class="text-center">
             <td><?php echo $data['EMPID']; ?></td>
             <td><?php echo $data['EMP_FNAME']; ?></td>
             <td><?php echo $data['EMP_LNAME']; ?></td>
@@ -50,9 +47,9 @@ error_reporting(0); ?>
             <td><?php echo $data['EMP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
             <td>
-                <a class="btn btn-primary" href="update_employee.php?id=<?php echo $data['EMPID']; ?>">Update</a>
-                <a class="btn btn-danger" onClick="javascript: return confirm('Please confirm deletion');" href="delete_employee.php?id=<?php echo $data['EMPID']; ?>">Delete</a>
-                <a class="btn btn-primary" href="create_dependents.php?id=<?php echo $data['EMPID']; ?>">Add Dependents</a>
+                <a class="btn btn-outline-primary" href="update_employee.php?id=<?php echo $data['EMPID']; ?>">Update</a>
+                <a class="btn btn-outline-danger" onClick="javascript: return confirm('Please confirm deletion');" href="delete_employee.php?id=<?php echo $data['EMPID']; ?>">Delete</a>
+                <a class="btn btn-outline-primary" href="create_dependents.php?id=<?php echo $data['EMPID']; ?>">Add Dependents</a>
             </td>
         </tr>
         <?php } ?>

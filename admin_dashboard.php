@@ -12,8 +12,6 @@ error_reporting(0);
     <title>Document</title>
 </head>
 <body>
-    <center>
-        <h1>Admin Dashboard</h1>
-    </center>
+        <h1 class="text-center text-primary">Admin Dashboard</h1>
 </body>
 </html>
