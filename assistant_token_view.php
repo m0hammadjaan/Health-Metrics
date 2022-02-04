@@ -17,9 +17,9 @@ else{
 </head>
 <body>
     
-<center>
-        <h1>Tokens</h1>
-    </center>
+
+        <h1 class="text-center text-primary">Tokens</h1>
+   
     
 <?php
     #$sql="select * from token where DOCID='{$_SESSION["username"]}' ";
@@ -62,7 +62,7 @@ else{
     <?php } 
     else
     {
-        echo '<h1>No Record found :(</h1>';
+        echo '<h1 class="text-center text-danger">No Tokens Yet</h1>';
     }
     mysqli_close($conn);
     ?>

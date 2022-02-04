@@ -17,9 +17,9 @@ if($_SESSION["username"]=="admin")
 </head>
 <body>
     
-<center>
-        <h1>Dependent Token</h1>
-    </center>
+
+        <h1 class="text-center text-primary">Dependent Token</h1>
+
     
     <?php
     $dep_id=$_GET['id'];
@@ -29,11 +29,14 @@ if($_SESSION["username"]=="admin")
     {
 
     ?>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
     <form action="" method="POST">
-        Employee ID<input type="number" name="empid" hidden value="<?php echo $emp_fetch_data['EMPID'] ?>" id="" ><br>
+        <div class="form-group"><h6 class="font-weight-bold">Employee ID </h6><input type="number" name="empid" hidden value="<?php echo $emp_fetch_data['EMPID'] ?>" id="" ></div>
         <?php } ?>
-        Dependent ID<input type="number" name="depid" hidden value="<?php echo $dep_id; ?>" id="" ><br>
-        Doctor ID<select name="docid" id=""><br>
+        <div class="form-group"><h6 class="font-weight-bold">Dependent ID</h6><input type="number" name="depid" hidden value="<?php echo $dep_id; ?>" id="" ></div>
+        <div class="form-group"><h6 class="font-weight-bold">Doctor ID</h6><select class="form-select" name="docid" id=""></div>
             <option value="" selected disabled>Select Doctor</option>
             <?php
             $select_sql="select * from doctor";
@@ -44,7 +47,11 @@ if($_SESSION["username"]=="admin")
             <?php }
             ?>
         </select>
-        <input type="submit" name="submit" value="Submit">
+        <div class="row">
+            <div class="col-md-12">
+        <input class="btn btn-outline-primary btn-lg w-100" type="submit" name="submit" value="Submit">
+        </div>
+        </div>
         <?php
          $e_id=$_POST['empid'];
          $d_id=$_POST['depid'];
@@ -59,8 +66,11 @@ if($_SESSION["username"]=="admin")
         else{
             echo "Query failed :'(";
         }
-    }else{ echo "Select Doctor please!"; }
+    }else{ echo ""; }
         ?>
     </form>
+</div>
+<div class="col-md-4"></div>
+</div>
 </body>
 </html>

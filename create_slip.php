@@ -12,9 +12,9 @@ error_reporting(0);
 </head>
 <body>
     
-<center>
-        <h1>General Checkup</h1>
-    </center>
+
+        <h1 class="text-center text-primary">Check-up</h1>
+
     
     <?php
     $token_id=$_GET['id'];
@@ -25,21 +25,30 @@ error_reporting(0);
         while($data_select=mysqli_fetch_assoc($result_select))
         {
     ?>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+    
     <form action="" method="POST">
-        Token ID <input type="number" name="tokenid" hidden value="<?php echo $token_id; ?>" id=""><br><br>
-        Employee ID <input type="number" name="empid" hidden value="<?php echo $data_select['EMPID']; ?>" id=""><br><br>
-        Dependent ID<input type="number" name="depid" hidden value="<?php echo $data_select['DEPID']; ?>" id=""><br><br>
-        Doctor ID <input type="number" name="docid" hidden value="<?php echo $data_select['DOCID']; ?>" id=""><br><br>
+    <div class="form-group">  <h6 class="font-weight-bold">Token ID</h6><input class="form-control" type="number" name="tokenid" hidden value="<?php echo $token_id; ?>" id=""></div>
+    <div class="form-group">  <h6 class="font-weight-bold">Employee ID</h6> <input class="form-control" type="number" name="empid" hidden value="<?php echo $data_select['EMPID']; ?>" id=""></div>
+    <div class="form-group">  <h6 class="font-weight-bold">Dependent ID</h6><input class="form-control" type="number" name="depid" hidden value="<?php echo $data_select['DEPID']; ?>" id=""></div>
+    <div class="form-group">  <h6 class="font-weight-bold">Doctor ID </h6><input class="form-control" type="number" name="docid" hidden value="<?php echo $data_select['DOCID']; ?>" id=""></div>
         <?php
         }
     }
     ?>
 
-        Reason <textarea name="reason" id="" cols="30" rows="10"></textarea><br><br>
-        Medicine <textarea name="medicine" id="" cols="30" rows="10"></textarea><br><br>
-        Vendor <textarea name="vendor" id="" cols="30" rows="10"></textarea><br><br>
-        Diagnosis <textarea name="diagnosis" id="" cols="30" rows="10"></textarea><br><br>
-        <input type="submit" name="submit" value="Submit">
+<div class="form-group">  <h6 class="font-weight-bold">Reason</h6> <textarea class="form-control" name="reason" id="" cols="30" rows="10"></textarea></div>
+<div class="form-group">  <h6 class="font-weight-bold">Medicine </h6><textarea class="form-control" name="medicine" id="" cols="30" rows="10"></textarea></div>
+<div class="form-group">  <h6 class="font-weight-bold">Vendor </h6><textarea class="form-control" name="vendor" id="" cols="30" rows="10"></textarea></div>
+<div class="form-group">  <h6 class="font-weight-bold">Diagnosis <h6><textarea class="form-control" name="diagnosis" id="" cols="30" rows="10"></textarea></div>
+<div class="row">
+    <div class="col-md-12">
+       
+<input class="btn btn-outline-primary btn-lg w-100" type="submit" name="submit" value="Submit">
+</div>
+</div>
         <?php
         $empid=$_POST['empid'];
         $depid=$_POST['depid'];
@@ -54,29 +63,29 @@ error_reporting(0);
             case $reason!="" && $medicine!="" && $vendor=="" && $diagnosis=="" :
                 $sql="insert into general_checkup(TOKENID,EMPID,DEPID,DOCID,REASON,MEDICINE) values
                ('{$token_id}','{$empid}','{$depid}','{$docid}','{$reason}','{$medicine}')";
-                $result=mysqli_query($conn,$sql) or die('Failed :(');
+                $result=mysqli_query($conn,$sql) or die('');
                 header("Location: http://localhost/testpro/doc_token_view.php");
                 break;
             case $reason!="" && $medicine!="" && $vendor!="" && $diagnosis!="" :
                  $sql="insert into general_checkup(TOKENID,EMPID,DEPID,DOCID,REASON,MEDICINE,VENDOR,DIAGNOSIS) values 
                  ('{$token_id}','{$empid}','{$depid}','{$docid}','{$reason}','{$medicine}','{$vendor}','{$diagnosis}')";
-                 $result=mysqli_query($conn,$sql) or die('Failed :(');
+                 $result=mysqli_query($conn,$sql) or die('');
                  header("Location: http://localhost/testpro/doc_token_view.php");
                  break;
             case $reason!="" && $medicine=="" && $vendor!="" && $diagnosis!="" :
                 $sql="insert into general_checkup(TOKENID,EMPID,DEPID,DOCID,REASON,VENDOR,DIAGNOSIS) values 
                 ('{$token_id}','{$empid}','{$depid}','{$docid}','{$reason}','{$vendor}','{$diagnosis}')";
-                $result=mysqli_query($conn,$sql) or die('Failed :(');
+                $result=mysqli_query($conn,$sql) or die('');
                 header("Location: http://localhost/testpro/doc_token_view.php");
                 break;
             case $reason!="" && $medicine!="" && $vendor=="" && $diagnosis=="" &&$depid=="" :
                 $sql="insert into general_checkup(TOKENID,EMPID,DOCID,REASON,MEDICINE) values
                 ('{$token_id}','{$empid}','{$docid}','{$reason}','{$medicine}')";
-                $result=mysqli_query($conn,$sql) or die('Failed :(');
+                $result=mysqli_query($conn,$sql) or die('');
                 header("Location: http://localhost/testpro/doc_token_view.php");
                 break;
             default:
-                echo 'something went wrong :(';
+                echo '<h6 class="text-center text-danger">something went wrong :(</h6>';
                 break;
         }
     }
@@ -87,5 +96,8 @@ error_reporting(0);
         ?>
         
     </form>
+    </div>
+    <div class="col-md-4"></div>
+    </div>
 </body>
 </html>

@@ -12,15 +12,20 @@ error_reporting(0);
     <title>Document</title>
 </head>
 <body>
-    
-<center>
-        <h1>Employee Token</h1>
-    </center>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+        <h1 class="text-center text-primary">Employee Token</h1>
+   
     
     <form action="" method="POST">
-        Empployee ID<input type="number" placeholder="Search" name="empid" id="">
-        <input type="submit" name="search" value="Search">
+    <div class="form-group">  <h6 class="font-weight-bold">Empployee ID</h6><input class="form-control" type="number" placeholder="Search" name="empid" id=""></div>
+        <input class="btn btn-outline-primary" type="submit" name="search" value="Search">
 </form>
+</div>
+    <div class="col-md-4"></div>
+    </div>
         <?php
         if(isset($_POST['search'])){
             $search_id=$_POST['empid'];
@@ -29,7 +34,7 @@ error_reporting(0);
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+    <table class="table table-bordered border-primary text-center">
         <tr>
             <th>ID</th>
             <th>FIRST NAME</th>
@@ -57,7 +62,7 @@ error_reporting(0);
             <td><?php echo $data['EMP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
             <td>
-                <a href="emp_token_add.php?id=<?php echo $data['EMPID']; ?>">Token</a>
+                <a class="btn btn-outline-primary" href="emp_token_add.php?id=<?php echo $data['EMPID']; ?>">Token</a>
             </td>
         </tr>
         <?php } ?>
@@ -65,7 +70,7 @@ error_reporting(0);
     <?php } 
     else
     {
-        echo '<h1>No Record found :(</h1>';
+        echo '<h1 class="text-center text-danger">No Record found :(</h1>';
     }
     mysqli_close($conn);
 }

@@ -17,16 +17,19 @@ if($_SESSION["username"]=="admin")
 </head>
 <body>
     
-<center>
-        <h1>Employee Token</h1>
-    </center>
+
+        <h1 class="text-center text-primary">Employee Token</h1>
+
     
     <?php
     $emp_id=$_GET['id'];
     ?>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
     <form action="" method="POST">
-    Employee ID<input type="number" name="empid" hidden value="<?php echo $emp_id; ?>" id="" ><br>
-    Doctor ID<select name="docid" id=""><br>
+    <div class="form-group"><h6 class="font-weight-bold">Employee ID</h6><input type="number" name="empid" hidden value="<?php echo $emp_id; ?>" id="" ></div>
+    <div class="form-group"><h6 class="font-weight-bold">Doctor ID<select class="form-select" name="docid" id=""></div>
             <option value="" selected disabled>Select Doctor</option>
             <?php
             $select_sql="select * from doctor";
@@ -37,7 +40,11 @@ if($_SESSION["username"]=="admin")
             <?php }
             ?>
         </select>
-        <input type="submit" name="submit" value="Submit">
+        <div class="row">
+            <div class="col-md-12">
+        <input class="btn btn-outline-primary btn-lg w-100" type="submit" name="submit" value="Submit">
+            </div>
+            </div>
         <?php
          $doc_id=$_POST['docid'];
         if(isset($_POST['submit'])  && $doc_id!="Select Doctor" ){
@@ -50,9 +57,12 @@ if($_SESSION["username"]=="admin")
         else{
             echo "Query failed :'(";
         }
-    }else{ echo "Select Doctor please!"; }
+    }else{ echo ""; }
         ?>
         
     </form>
+</div>
+<div class="col-md-4"></div>
+</div>
 </body>
 </html>

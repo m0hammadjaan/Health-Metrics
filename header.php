@@ -72,7 +72,7 @@ error_reporting(0);
       <div class="d-flex">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-           <a href="admin_dashboard.php"> <h4><?php echo $_SESSION['username'] ?></h4></a>
+           <a href="admin_dashboard.php"> <h4><?php echo $_SESSION['username'] ?></h4> </a>
         </li>
         <li class="nav-item">
           <a href="logout.php">

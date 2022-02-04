@@ -35,9 +35,9 @@ if($_SESSION["username"]=="admin")
 </style>
 </head>
 <body>
-    <center>
-        <h1>Receptionist Dashboard</h1>
-    </center> 
+
+        <h1 class="text-center text-primary">Receptionist Dashboard</h1>
+ 
     <a class="rec-a" href='employee_token.php'><div class="rec-div"><h3 class="rec-h3">EMPLOYEE TOKEN</h3></div></a>
     <a class="rec-a" href='dependent_token.php'><div class="rec-div"><h3 class="rec-h3">DEPENDENT TOKEN</h3></div></a>
 </body>

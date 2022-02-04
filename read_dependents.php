@@ -20,7 +20,7 @@ error_reporting(0); ?>
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+    <table class="table table-bordered border-primary text-center">
         <tr>
             <th>EMPLOYEE ID</th>
             <th>DEPENDENT ID</th>
@@ -44,8 +44,8 @@ error_reporting(0); ?>
             <td><?php echo $data['DEP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
             <td>
-                <a href="update_dependents.php?id=<?php echo $data['DEPID']; ?>">Update</a>
-                <a onClick="javascript: return confirm('Please confirm deletion?');" href="http://localhost/testpro/delete_dependents.php?id=<?php echo $data['DEPID']; ?>">Delete</a>
+                <a class="btn btn-outline-primary" href="update_dependents.php?id=<?php echo $data['DEPID']; ?>">Update</a>
+                <a class="btn btn-outline-danger" onClick="javascript: return confirm('Please confirm deletion?');" href="http://localhost/testpro/delete_dependents.php?id=<?php echo $data['DEPID']; ?>">Delete</a>
             </td>
         </tr>
         <?php } ?>

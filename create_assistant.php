@@ -17,23 +17,29 @@ else{
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="div-center">
-        <div class="content">
-<center>
-        <h1>General Check-up</h1>
-    </center>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+ 
+        <h1 class="text-center text-primary">Assistant Checkup</h1>
+   
 <?php 
     $tid=$_GET['id'];
     ?>
     <form action="" method="post">
-    <div class="form-group"> <label for="">Token ID </label><input class="form-control" type="number" name="tid" value="<?php echo $tid ?>" disabled /></div>
-    <div class="form-group"> <label for=""> BP </label><input class="form-control" type="text" name="bp" /> e.g. 120/75</div>
-    <div class="form-group"> <label for=""> Temperature </label> <input class="form-control" type="number" name="temperature" /> e.g. 98 </div>
-    <div class="form-group"> <label for="">Pulse</label> <input class="form-control" type="number" name="pulse" />e.g. 77</div>
-    <div class="form-group"> <label for="">Blood Glucose<input class="form-control" type="number" name="glucose"/> e.g. 130 </div>
-        <input class="btn btn-outline-primary" type="submit" name="submit" value="Submit"/>
+    <div class="form-group"> <h6 class="font-weight-bold">Token ID </h6><input class="form-control" type="number" name="tid" value="<?php echo $tid ?>" disabled /></div>
+    <div class="form-group"> <h6 class="font-weight-bold"> BP </h6><input class="form-control" type="text" name="bp" /><small class="form-text text-muted"> e.g. 120/75 </small></div>
+    <div class="form-group"> <h6 class="font-weight-bold"> Temperature </h6> <input class="form-control" type="number" name="temperature" /><small class="form-text text-muted"> e.g. 98 </small></div>
+    <div class="form-group"> <h6 class="font-weight-bold">Pulse</h6> <input class="form-control" type="number" name="pulse" /><small class="form-text text-muted">e.g. 77</small></div>
+    <div class="form-group"> <h6 class="font-weight-bold">Blood Glucose<input class="form-control" type="number" name="glucose"/><small class="form-text text-muted"> e.g. 130 </small></div>
+    <div class="row">
+        <div class="col-md-12">
+        <input class="btn btn-outline-primary btn-lg w-100" type="submit" name="submit" value="Submit"/>
+        </div>
+        </div>
     </form>
     </div>
+    <div class="col-md-4"></div>
     </div>
     <?php
     $bp=$_POST['bp'];
@@ -56,7 +62,7 @@ else{
     }
     }
     else{
-        echo 'Token ID not found!';
+        echo '';
     }
     ?>
 </body>

@@ -8,33 +8,37 @@ error_reporting(0);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-     
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="style.css">
     <title>Health Metrics | Log In</title>
 </head>
 <body>
     <div class="back-login">
-            <div class="div-center">
-                <div class="content">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
                     <center>
                         <img src="HealthMetrics.png" alt="Health Metrics" srcset="">
                     </center>
-                    <center><h3>Log In</h3></center>
-                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                    <h1 class="text-center text-primary">Log In</h1>
+                    <form class="myForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                         <div class="form-group">
-                            <label for="">Username</label>
+                            <h6 class="font-weight-bold">Username</h6>
                             <input class="form-control" type="text" name="username" placeholder="Username" />
                         </div>
                         <div class="form-group">
-                            <label for="">Password</label>
+                            <h6 class="font-weight-bold">Password</h6>
                             <input class="form-control" type="password" name="password" placeholder="Password" />
                         </div>
-                        <input class="btn btn-primary" type="submit" name="login" value="Log In "/><br><br>
+                        <div class="row">
+            <div class="col-md-12">
+        <input class="w-100 btn btn-outline-primary btn-block btn-lg" type="submit" name="login" value="Log In"/>
+        </div>
+        </div>
                     </form>
-                </div>
+            </div>
+            <div class="col-md-4"></div>
             </div>
     </div>
 

@@ -10,15 +10,20 @@ error_reporting(0); ?>
     <title>Document</title>
 </head>
 <body>
-    
-<center>
-        <h1>Dependent Token</h1>
-    </center>
+<div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+        <h1 class="text-center text-primary">Dependent Token</h1>
+
     
 <form action="" method="POST">
-        Dependent ID<input type="number" placeholder="Search" name="depid" id="">
-        <input type="submit" name="search" value="Search">
+        <div class="form-group">  <h6 class="font-weight-bold">Dependent ID</h6><input class="form-control" type="number" placeholder="Search" name="depid" id=""></div>
+        <input class="btn btn-outline-primary" type="submit" name="search" value="Search">
 </form>
+</div>
+<div class="col-md-4"></div>
+</div>
 <?php
 if(isset($_POST['search']))
 {
@@ -27,7 +32,7 @@ if(isset($_POST['search']))
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table border="1">
+    <table class="table table-bordered border-primary text-center">
         <tr>
             <th>EMPLOYEE ID</th>
             <th>DEPENDENT ID</th>
@@ -50,14 +55,14 @@ if(isset($_POST['search']))
             <td><?php echo $data['GENDER']; ?></td>
             <td><?php echo $data['DEP_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
-            <td><a href="dep_token_add.php?id=<?php echo $data['DEPID']; ?>">Token</a></td>
+            <td><a class="btn btn-outline-primary" href="dep_token_add.php?id=<?php echo $data['DEPID']; ?>">Token</a></td>
         </tr>
         <?php } ?>
     </table>
     <?php } 
     else
     {
-        echo '<h1>No Record found :(</h1>';
+        echo '<h1 class="text-center text-danger">No Record found :(</h1>';
     }
     mysqli_close($conn);
 }

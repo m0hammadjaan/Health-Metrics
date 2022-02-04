@@ -21,7 +21,7 @@ error_reporting(0); ?>
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
     ?>
-    <table class="table table-bordered border-primary">
+    <table class="table table-bordered border-primary text-center">
         <tr>
             <th>ID</th>
             <th>FIRST NAME</th>
@@ -49,8 +49,8 @@ error_reporting(0); ?>
             <td><?php echo $data['DOC_CNIC']; ?></td>
             <td><?php echo $data['DOB']; ?></td>
             <td>
-                <a class="btn btn-primary" href="update_doctor.php?id=<?php echo $data['DOCID']; ?>">Update</a>
-                <a class="btn btn-danger" onClick="javascript: return confirm('Please confirm deletion');" href="delete_doctor.php?id=<?php echo $data['DOCID']; ?>">Delete</a>
+                <a class="btn btn-outline-primary" href="update_doctor.php?id=<?php echo $data['DOCID']; ?>">Update</a>
+                <a class="btn btn-outline-danger" onClick="javascript: return confirm('Please confirm deletion');" href="delete_doctor.php?id=<?php echo $data['DOCID']; ?>">Delete</a>
             </td>
         </tr>
         <?php } ?>

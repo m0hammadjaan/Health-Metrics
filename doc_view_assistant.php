@@ -11,11 +11,11 @@ error_reporting(0);?>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="div-center">
-        <div class="content">
-        <center>
-        <h1>General Check-up</h1>
-    </center>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        
+        <h1 class="text-center text-primary">Assistant Record</h1>
     
 <?php
 $tid=$_GET['id'];
@@ -58,10 +58,13 @@ $tid=$_GET['id'];
     }
     mysqli_close($conn);
     ?>
-    <center>
-        <a class="btn btn-outline-primary" href="doc_token_view.php"> < Back </a>
-    </center>
+    <div class="row">
+        <div class="col-md-12">
+        <a class="btn btn-outline-primary btn-lg btn-block w-100" href="doc_token_view.php"> < Back </a>
         </div>
+</div>
+        </div>
+        <div class="col-md-4"></div>
     </div>
 </body>
 </html>
