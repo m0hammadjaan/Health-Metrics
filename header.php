@@ -90,18 +90,14 @@ error_reporting(0);
 else{?>
   <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid">
-    <div class="to be done">
-  <div class="d-flex">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <h4><?php echo $_SESSION['username'] ?></h4>
-        </li>
-        <li class="nav-item">
+  <h4><?php echo $_SESSION['username'] ?></h4>
+        <ul class="navbar-header">
+          
           <a href="logout.php">
           <input class="btn btn-outline-primary" type="button" value="Logout">
         </a>
         
-        </li>
+        
     </ul>
       </div>
       </div>  

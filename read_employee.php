@@ -58,7 +58,7 @@ error_reporting(0); ?>
     <?php } 
     else
     {
-        echo '<h1>No Record found :(</h1>';
+        echo '<h1 class="text-center text-danger">No Record found :(</h1>';
     }
     mysqli_close($conn);
     ?>

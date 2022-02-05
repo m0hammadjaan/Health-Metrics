@@ -36,7 +36,7 @@ error_reporting(0); ?>
         <div class="form-group">  <h6 class="font-weight-bold">Email </h6><input class="form-control" type="email" name="email" value="<?php echo $data['EMP_EMAIL'] ?>"/> <small class="form-text text-muted"> e.g. abc_123@xyz.com </small></div>
         <div class="form-group">  <h6 class="font-weight-bold">Designation </h6><input class="form-control" type="text" name="designation" value="<?php echo $data['DESIGNATION'] ?>" /> <small class="form-text text-muted"> e.g. Director </small></div>
         <div class="form-group">  <h6 class="font-weight-bold">Contact </h6><input class="form-control" type="number" name="contact" value="<?php echo $data['EMP_CONTACT'] ?>" /> <small class="form-text text-muted"> e.g. 03xxxxxxxxx </small> </div>
-        <div class="form-group">  <h6 class="font-weight-bold">CNIC </h6> <input class="form-control" type="number" name="cnic" value="<?php echo $data['EMP_CNIC'] ?>" /> XXXXXXXXXXXXX </div>
+        <div class="form-group">  <h6 class="font-weight-bold">CNIC </h6> <input class="form-control" type="number" name="cnic" value="<?php echo $data['EMP_CNIC'] ?>" /><small class="form-text text-muted"> e.g. XXXXXXXXXXXXX </small></div>
         <div class="form-group">  <h6 class="font-weight-bold">DOB </h6><input class="form-control" type=text placeholder="YYYY-MM-DD" name="dob" value="<?php echo $data['DOB'] ?>"/> <small class="form-text text-muted"> e.g. 2001-02-25 </small></div>
         <div class="row">
             <div class="col-md-12">

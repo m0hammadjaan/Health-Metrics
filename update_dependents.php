@@ -11,9 +11,7 @@ error_reporting(0); ?>
 </head>
 <body>
     
-<center>
-        <h1>Update Dependents</h1>
-    </center>
+<h1 class="text-center text-primary">Update Dependents</h1>
     
 <?php 
     $did=$_GET['id'];
@@ -22,16 +20,28 @@ error_reporting(0); ?>
     if(mysqli_num_rows($result_select)>0){
         while($data=mysqli_fetch_assoc($result_select)){
     ?>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
     <form action="" method="post">
-        Employee ID <input type="number" name="dempid" value="<?php echo $data['EMPID'] ?>" disabled /><br>
-        Dependent ID <input type="number" name="did" value="<?php echo $did; ?>" disabled /><br><br>
-        First Name <input type="text" name="fname" value="<?php echo $data['DEP_FNAME'] ?>" /> e.g. Muhammad <br>
-        Last Name <input type="text" name="lname" value="<?php echo $data['DEP_LNAME'] ?>" /> e.g. Jan <br>
-        Gender:   Male <input type="radio" name="gender" <?php if($data['GENDER'] == "Male"){echo "checked"; $dgender="Male";}?> value="Male" /> Female <input type="radio" name="gender" <?php if($data['GENDER'] == "Female"){echo "checked"; $dgender="Female";}?> value="Female"/> <br>
-        CNIC <input type="text" name="cnic" value=" <?php echo $data['DEP_CNIC'] ?>" /> XXXXXXXXXXXXX <br>
-        DOB <input type=text placeholder="YYYY-MM-DD" name="dob" value="<?php echo $data['DOB'] ?>"> e.g. 2001-02-25 <br>
-        <input type="submit" name="submit" value="Submit"/>
+    <div class="form-group">  <h6 class="font-weight-bold">Employee ID </h6><input class="form-control" type="number" name="dempid" value="<?php echo $data['EMPID'] ?>" disabled /><br>
+        <div class="form-group">  <h6 class="font-weight-bold">Dependent ID </h6><input class="form-control" type="number" name="did" value="<?php echo $did; ?>" disabled /><br><br>
+        <div class="form-group">  <h6 class="font-weight-bold">First Name </h6><input class="form-control" type="text" name="fname" value="<?php echo $data['DEP_FNAME'] ?>" /> <small class="form-text text-muted">e.g. Muhammad </small></div>
+        <div class="form-group">  <h6 class="font-weight-bold">Last Name </h6><input class="form-control" type="text" name="lname" value="<?php echo $data['DEP_LNAME'] ?>" /> <small class="form-text text-muted">e.g. Jan </small></div>
+        <div class="form-group">  <h6 class="font-weight-bold">Gender:  </h6> 
+        <div class="form-check"><label>Male </label> <input class="form-check-input" type="radio" name="gender" <?php if($data['GENDER'] == "Male"){echo "checked"; $dgender="Male";}?> value="Male" /> </div>
+        <div class="form-check"><label>Female </label> <input class="form-check-input" type="radio" name="gender" <?php if($data['GENDER'] == "Female"){echo "checked"; $dgender="Female";}?> value="Female"/> </div>
+        <div class="form-group">  <h6 class="font-weight-bold">CNIC </h6><input class="form-control" type="text" name="cnic" value=" <?php echo $data['DEP_CNIC'] ?>" /> XXXXXXXXXXXXX <br>
+        <div class="form-group">  <h6 class="font-weight-bold">DOB </h6><input class="form-control" type=text placeholder="YYYY-MM-DD" name="dob" value="<?php echo $data['DOB'] ?>"/><small class="form-text text-muted"> e.g. 2001-02-25 </small></div>
+        <div class="row">
+            <div class="col-md-12">
+        <input class="w-100 btn btn-outline-primary btn-block btn-lg" type="submit" name="submit" value="Update"/>
+        </div>
+        </div>
     </form>
+    </div>
+    <div class="col-md-4"></div>
+    </div>
     <?php
         }
     }
